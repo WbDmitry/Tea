@@ -61,3 +61,46 @@ ul {
 .user-actions__item-search {
   margin-left: 80px;
 }
+
+.top{
+  background-image: url(/image/bg1.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.top__inner{
+  min-height: 500px;
+  color: white;
+  font-family: "Cormorant", serif; 
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.top__title{
+  font-size: 60px;
+  margin-bottom: 20px;
+  max-width: 760px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.top__text{
+  font-size: 24px;
+  margin-bottom: 48px;
+  max-width: 560px;
+  line-height: normal;
+}
+
+.blockquote{
+  font-family: "Cormorant", serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: italic;
+  max-width: 704px;
+  margin: 150px auto;
+}
+
