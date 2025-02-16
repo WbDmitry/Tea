@@ -20,11 +20,13 @@ body {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.5;
+  position: relative;
 }
 
-button{
+button {
   padding: 0;
   border: none;
+  background-color: transparent;
 }
 
 ul {
@@ -48,18 +50,21 @@ ul {
   padding: 30px 0;
 }
 
-.menu__btn{
+.menu__btn {
   display: none;
   width: 40px;
   height: 20px;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 2;
+  position: relative;
 }
 
-.menu__btn span{
+.menu__btn span {
   background-color: #151618;
   height: 2px;
   width: 100%;
+
 }
 
 .menu__list {
@@ -68,6 +73,29 @@ ul {
   gap: 0 65px;
   font-weight: 400;
   font-size: 18px;
+  position: relative;
+  z-index: 3;
+}
+
+.menu--close{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #151618bb;
+  z-index: 1;
+  transition: background-color .3s ease;
+}
+
+.menu--close.menu--open{
+  display: block;
+}
+
+.mobile-nav,
+.menu__close {
+  display: none;
 }
 
 .user-actions {
@@ -75,6 +103,8 @@ ul {
   align-items: center;
   gap: 0 20px;
 }
+
+
 
 .user-actions__item-search {
   margin-left: 80px;
@@ -150,15 +180,65 @@ ul {
     order: -1;
   }
 
-  .menu__list{
-    display: none;
+  .menu__list {
+    transform: translateY(-100%);
+    display: block;
+    text-align: center;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 360px;
+    margin: 0 auto;
+    padding-top: 60px;
+    background-color: white;
+    transition: transform .5s ease;
   }
 
-  .menu__btn{
+  .menu__list.menu__list-open{
+    transform: translateY(0);
+  }
+
+  .mobile-nav,
+  .menu__close {
+    display: block;
+  }
+
+  .menu__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .menu__item {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-family: 'Cormorant', serif;
+  }
+
+  .mobile-menu {
+    padding-top: 60px;
+    margin: 60px 0;
+    border-top: 2px solid #f7f2ea;
+  }
+
+  .mobile-menu__item {
+    margin-bottom: 35px;
+  }
+
+  .mobile-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+    background-color: #f7f2ea;
+  }
+
+  .menu__btn {
     display: flex;
   }
 
-  .blockquote{
+  .blockquote {
     font-size: 26px;
     margin: 90px auto;
   }
@@ -178,11 +258,11 @@ ul {
     font-weight: 300;
   }
 
-  .top__inner{
+  .top__inner {
     min-height: 367px;
   }
 
-  .blockquote{
+  .blockquote {
     font-size: 21px;
     max-width: 376px;
     margin: 60px auto;

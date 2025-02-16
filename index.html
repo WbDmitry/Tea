@@ -15,6 +15,9 @@
 </head>
 
 <body>
+  <div class="menu--close">
+
+  </div>
   <header class="header">
     <div class="container">
       <div class="header__inner">
@@ -22,7 +25,7 @@
           <img src="/image/logo.svg" alt="Tea" />
         </a>
         <nav class="menu">
-          <button class='menu__btn'>
+          <button class="menu__btn">
             <span></span>
             <span></span>
             <span></span>
@@ -30,6 +33,11 @@
           </button>
 
           <ul class="menu__list">
+            <li class="menu__close">
+              <button class="menu__close-btn">
+                <img src="/image/close.svg" alt="" />
+              </button>
+            </li>
             <li class="menu__item">
               <a href="#" class="menu__link">Black</a>
             </li>
@@ -44,6 +52,39 @@
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">Pu-erh</a>
+            </li>
+
+            <li class="mobile-nav">
+              <ul class="mobile-menu">
+                <li class="mobile-menu__item">
+                  <a href="#" class="mobile-menu__link"> Contact Us </a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="#" class="mobile-menu__link"> Our Blog </a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="#" class="mobile-menu__link">
+                    Shipping and Delivery
+                  </a>
+                </li>
+              </ul>
+              <ul class="mobile-actions">
+                <li class="mobile-actions__item">
+                  <a href="#" class="mobile-actions__link">
+                    <img src="/image/inbox.svg" alt="inbox" />
+                  </a>
+                </li>
+                <li class="mobile-actions__item">
+                  <a href="#" class="mobile-actions__link">
+                    <img src="/image/person.svg" alt="person" />
+                  </a>
+                </li>
+                <li class="mobile-actions__item">
+                  <a href="#" class="mobile-actions__link">
+                    <img src="/image/search.svg" alt="search" />
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -86,6 +127,7 @@
       our loved ones."
     </blockquote>
   </main>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>
