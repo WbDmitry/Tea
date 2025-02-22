@@ -64,7 +64,6 @@ ul {
   background-color: #151618;
   height: 2px;
   width: 100%;
-
 }
 
 .menu__list {
@@ -77,7 +76,7 @@ ul {
   z-index: 3;
 }
 
-.menu--close{
+.menu--close {
   display: none;
   position: absolute;
   top: 0;
@@ -86,10 +85,10 @@ ul {
   bottom: 0;
   background-color: #151618bb;
   z-index: 1;
-  transition: background-color .3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.menu--close.menu--open{
+.menu--close.menu--open {
   display: block;
 }
 
@@ -103,8 +102,6 @@ ul {
   align-items: center;
   gap: 0 20px;
 }
-
-
 
 .user-actions__item-search {
   margin-left: 80px;
@@ -153,6 +150,39 @@ ul {
   margin: 150px auto;
 }
 
+.assortment {
+  font-family: 'Cormorant', serif;
+  margin-top: 75px;
+  margin-bottom: 150px;
+}
+
+.assortment__title {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.assortment__list {
+  display: flex;
+  gap: 20px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.assortment__image {
+  width: 208px;
+  height: 208px;
+}
+
+.assortment__text {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+}
+
 @media (max-width: 1000px) {
   .header__inner {
     padding: 20px 0;
@@ -172,6 +202,15 @@ ul {
 
   .blockquote {
     max-width: 640px;
+  }
+
+  .assortment {
+    margin-bottom: 120px;
+  }
+
+  .assortment__image {
+    width: 170px;
+    height: 170px;
   }
 }
 
@@ -193,10 +232,10 @@ ul {
     margin: 0 auto;
     padding-top: 60px;
     background-color: white;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
   }
 
-  .menu__list.menu__list-open{
+  .menu__list.menu__list-open {
     transform: translateY(0);
   }
 
@@ -242,6 +281,10 @@ ul {
     font-size: 26px;
     margin: 90px auto;
   }
+
+  .assortment__title {
+    font-size: 29px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -266,5 +309,14 @@ ul {
     font-size: 21px;
     max-width: 376px;
     margin: 60px auto;
+  }
+
+  .assortment__title {
+    font-size: 29px;
+  }
+
+  .assortment__image {
+    width: 150px;
+    height: 150px;
   }
 }
