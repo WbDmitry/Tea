@@ -112,6 +112,7 @@ ul {
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover;
+  padding-bottom: 50px;
 }
 
 .top__inner {
@@ -133,7 +134,6 @@ ul {
 
 .top__text {
   font-size: 24px;
-  margin-bottom: 48px;
   max-width: 560px;
   line-height: normal;
 }
@@ -145,17 +145,23 @@ ul {
   font-weight: normal;
   font-style: italic;
   max-width: 704px;
-  margin: 150px auto;
+  margin: 0 auto;
 }
 
-.assortment {
+.assortment,
+.blockquote,
+.feedback,
+.blog,
+.mailing-list,
+.prioritise {
   font-family: 'Cormorant', serif;
-  margin-top: 75px;
-  margin-bottom: 150px;
+  padding: 150px 0;
 }
 
 .assortment__title,
-.feedback__title {
+.feedback__title,
+.blog__title,
+.prioritise__title {
   text-align: center;
 }
 
@@ -181,7 +187,6 @@ ul {
 .feedback {
   font-family: 'Cormorant', serif;
   background-color: #fbf9f5;
-  padding: 60px 0;
 }
 
 .feedback__list {
@@ -204,6 +209,184 @@ ul {
 
 .feedback__author {
   font-weight: 600;
+}
+
+.blog__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 72px;
+}
+
+.blog__item {
+  flex-basis: 542px;
+  display: flex;
+  gap: 0 20px;
+}
+
+.blog__item__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog__item-image {
+  width: 270px;
+  height: 180px;
+}
+
+.blog__item__content-title {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.blog__item__content-author,
+.blog__item__content-btn {
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.blog__link {
+  border: 1px solid black;
+  padding: 12px 41px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.mailing-list {
+  font-family: 'Cormorant', serif;
+  padding: 120px 0;
+  background-color: #f7f2ea;
+  background-image: url(/image/bgImage2.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.mailing-list__inner {
+  display: flex;
+  gap: 40px;
+}
+
+.mailing-list__text {
+  line-height: 1.5;
+  flex-basis: 580px;
+}
+
+.mailing-list__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 580px;
+}
+
+.mailing-list__form-email {
+  border: none;
+  border-bottom: 1px solid #b8b58b;
+  background-color: transparent;
+  padding: 3px 15px;
+  width: 438px;
+  line-height: 30px;
+  margin-right: 25px;
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.5;
+  font-style: normal;
+  color: #151618;
+}
+
+.mailing-list__form-label {
+  margin-top: 16px;
+}
+
+.mailing-list__form-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  padding-left: 2px;
+}
+
+.mailing-list__form-checkbox-style {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #151618;
+  margin-top: 5px;
+}
+
+.mailing-list__form-checkbox:checked
+  + .mailing-list__form-checkbox-style::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #151618;
+  top: 1px;
+  left: 1px;
+}
+
+.mailing-list__form-email::placeholder {
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.5;
+  font-style: normal;
+  color: #b8b58b;
+}
+
+.mailing-list__form-btn {
+  border: 1px solid #151618;
+  padding: 12px 41px;
+  background-color: white;
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.5;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.mailing-list__form-checkbox-text {
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.7;
+  padding-left: 20px;
+}
+
+.prioritise__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.prioritise__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 248px;
+}
+
+.prioritise__item-title {
+  font-weight: 300;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.prioritise__item-text {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.prioritise__item-image {
+  width: 60px;
+  height: 60px;
 }
 
 @media (max-width: 1000px) {
@@ -238,6 +421,15 @@ ul {
 
   .feedback__item.feedback__item--hide {
     display: none;
+  }
+
+  .blog__item {
+    flex-basis: 460px;
+  }
+
+  .blog__item-image {
+    width: 230px;
+    height: 153px;
   }
 }
 
