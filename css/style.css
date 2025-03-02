@@ -153,7 +153,8 @@ ul {
 .feedback,
 .blog,
 .mailing-list,
-.prioritise {
+.prioritise,
+.footer {
   font-family: 'Cormorant', serif;
   padding: 150px 0;
 }
@@ -222,7 +223,7 @@ ul {
 .blog__item {
   flex-basis: 542px;
   display: flex;
-  gap: 0 20px;
+  gap: 20px 20px;
 }
 
 .blog__item__content {
@@ -287,7 +288,7 @@ ul {
   border-bottom: 1px solid #b8b58b;
   background-color: transparent;
   padding: 3px 15px;
-  width: 438px;
+  width: 430px;
   line-height: 30px;
   margin-right: 25px;
   font-family: 'Open Sans', serif;
@@ -296,6 +297,15 @@ ul {
   line-height: 1.5;
   font-style: normal;
   color: #151618;
+}
+
+.mailing-list__form-email::placeholder {
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.5;
+  font-style: normal;
+  color: #b8b58b;
 }
 
 .mailing-list__form-label {
@@ -330,15 +340,6 @@ ul {
   left: 1px;
 }
 
-.mailing-list__form-email::placeholder {
-  font-family: 'Open Sans', serif;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 1.5;
-  font-style: normal;
-  color: #b8b58b;
-}
-
 .mailing-list__form-btn {
   border: 1px solid #151618;
   padding: 12px 41px;
@@ -361,7 +362,7 @@ ul {
 
 .prioritise__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
 }
@@ -387,6 +388,99 @@ ul {
 .prioritise__item-image {
   width: 60px;
   height: 60px;
+}
+
+.footer {
+  font-family: 'Open Sans', serif;
+  background-color: #f8f5ef; 
+  padding: 70px 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer__column {
+  flex: 1;
+  min-width: 200px;
+}
+.footer__title {
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 35px;
+}
+
+.footer__item {
+  margin-bottom: 10px;
+}
+
+.footer__link {
+  font-size: 16px;
+}
+
+.footer__quote {
+  font-style: italic;
+  max-width: 400px;
+  margin-top: 74px;
+}
+
+.footer__quote-text {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.footer__quote-author {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer__text {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.footer__contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__contact-text {
+  font-size: 16px;
+}
+
+.footer__contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__contact-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__contact-logo {
+  width: 80px;
+  height: auto;
+}
+
+.footer__social-list{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 @media (max-width: 1000px) {
@@ -430,6 +524,21 @@ ul {
   .blog__item-image {
     width: 230px;
     height: 153px;
+  }
+
+  .mailing-list__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .mailing-list__title {
+    text-align: center;
+  }
+
+  .mailing-list__text {
+    text-align: center;
   }
 }
 
@@ -549,5 +658,22 @@ ul {
 
   .feedback__item {
     flex-basis: 100%;
+  }
+
+  .prioritise__item-title {
+    font-size: 20px;
+  }
+
+  .prioritise__item-text {
+    font-size: 16px;
+  }
+
+  .blog__item-image {
+    width: 230px;
+    height: 153px;
+  }
+
+  .mailing-list__form-email {
+    width: 280px;
   }
 }
